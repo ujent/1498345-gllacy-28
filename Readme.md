@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Ruslana](https://up.htmlacademy.ru/htmlcss/28/user/1498345).
-* Наставник: `Неизвестно`.
+* Наставник: [Татьяна Симоненко](https://htmlacademy.ru/profile/tatien).
 
 ---
 
