@@ -35,7 +35,7 @@
           <h2>Фильтр товаров</h2>
       </section>
       <section>
-          <h2>Список наименований мороженого</h2>
+          <h2 class="visually-hidden">Список наименований мороженого</h2>
           <ul>
               <li>
                 <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
@@ -125,5 +125,32 @@
         <span>Сделано в HTML Academy © 2019</span>
       </p>
     </footer>
+    <section>
+        <h2 class="visually-hidden">Форма заказа</h2>
+        <table>
+            <tr>
+                <td>
+                    <button type="button"><span class="visually-hidden">Убрать из заказа</span></button>
+                    <img src="img/ice-cream_1.jpg" alt="Фото пломбира с апельсиновым джемом" width="33" height="33" >
+                    <span>Пломбир с апельсиновым джемом</span>
+                </td>
+                <td>1,5 кг х <span>200 руб.</span></td>
+                <td>300 руб.</td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button"><span class="visually-hidden">Убрать из заказа</span></button>
+                    <img src="img/ice-cream_3.jpg" alt="Фото клубничного пломбира с присыпкой из белого шоколада" width="33" height="33" >
+                    <span>Клубничный пломбир с присыпкой из белого шоколада</span>
+                </td>
+                <td>1,5 кг х <span>300 руб.</span></td>
+                <td>450 руб.</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Итого: 750 руб.</td>
+            </tr>
+        </table>
+        <button type="button">Оформить заказ</button>
+    </section>
   </body>
 </html>
