@@ -11,7 +11,16 @@
             <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Глейси">
         </a>
         <ul>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li>
+              <a href="catalog.html">Каталог</a>
+              <ul>
+                <li><a href="blank.html"><b>Новинки</b></a></li>
+                <li><a href="catalog.html">Сливочное</a></li>
+                <li><a href="blank.html">Щербеты</a></li>
+                <li><a href="blank.html">Фруктовый лед</a></li>
+                <li><a href="blank.html">Мелорин</a></li>
+              </ul>
+            </li>
           <li><a href="blank.html">Доставка и оплата</a></li>
           <li><a href="blank.html">О компании</a></li>
         </ul>
@@ -32,7 +41,70 @@
           <li>Сливочное</li>
       </ul>
       <section>
-          <h2>Фильтр товаров</h2>
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <form action="https://echo.htmlacademy.ru" method="GET">
+            <p>
+                <h3>Сортировка:</h3>
+                <select name="sort">
+                    <option value="popularity" selected>по популярности</option>
+                    <option value="cheap">сначала недорогие</option>
+                    <option value="expensive">сначала дорогие</option>
+                    <option value="fat">по жирности</option>
+                </select>
+            </p>
+            <p>
+                <h3>Цена: 100 ₽ – 500 ₽</h3>
+                <div class="price-range" aria-label="диапазон цен">
+                    <div class="scale"></div>
+                    <div class="price-range-from" aria-label="цена от"></div>
+                    <div class="price-range-to" aria-label="цена до"></div>
+                </div>
+            </p>
+            <fieldset>
+                <legend>Жирность:</legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="fat-group" value="fat0" id="filter-fat0-id">
+                        <label for="id="filter-fat0-id">0%</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="fat-group" value="fat10" id="filter-fat10-id">
+                        <label for="id="filter-fat10-id">до 10%</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="fat-group" value="fat30" id="filter-fat30-id">
+                        <label for="id="filter-fat30-id">до 30%</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="fat-group" value="fat30up" id="filter-fat30up-id">
+                        <label for="id="filter-fat30up-id">выше 30%</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Наполнители:</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="chocolate" id="filter-filler-chocolate-id" checked>
+                        <label for="filter-filler-chocolate-id">шоколадные</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="sugar" id="filter-filler-sugar-id" checked>
+                        <label for="filter-filler-sugar-id">сахарные присыпки</label>
+                    </li>                    <li>
+                        <input type="checkbox" name="fruit" id="filter-filler-fruits-id">
+                        <label for="filter-filler-fruits-id">фрукты</label>
+                    </li>                    <li>
+                        <input type="checkbox" name="syrup" id="filter-filler-syrup-id">
+                        <label for="filter-filler-syrup-id">сиропы</label>
+                    </li>                    <li>
+                        <input type="checkbox" name="jam" id="filter-filler-jam-id">
+                        <label for="filter-filler-jam-id">джемы</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <button type="submit">Применить</button>
+        </form>
       </section>
       <section>
           <h2 class="visually-hidden">Список наименований мороженого</h2>
@@ -151,6 +223,15 @@
             </tr>
         </table>
         <button type="button">Оформить заказ</button>
+    </section>
+    <section>
+        <h2>Форма поиска</h2>
+        <form action="https://echo.htmlacademy.ru" method="GET">
+          <p>
+            <label for="search-input-id" class="visually-hidden">Поиск</label>
+            <input id="search-input-id" type="text" placeholder="Крем-брюле" name="search">
+          </p>
+        </form>
     </section>
   </body>
 </html>
