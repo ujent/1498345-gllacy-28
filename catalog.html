@@ -43,7 +43,7 @@
       <section>
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form action="https://echo.htmlacademy.ru" method="GET">
-            <p>
+            <div>
                 <h3>Сортировка:</h3>
                 <select name="sort">
                     <option value="popularity" selected>по популярности</option>
@@ -51,33 +51,33 @@
                     <option value="expensive">сначала дорогие</option>
                     <option value="fat">по жирности</option>
                 </select>
-            </p>
-            <p>
+            </div>
+            <div>
                 <h3>Цена: 100 ₽ – 500 ₽</h3>
                 <div class="price-range" aria-label="диапазон цен">
                     <div class="scale"></div>
                     <div class="price-range-from" aria-label="цена от"></div>
                     <div class="price-range-to" aria-label="цена до"></div>
                 </div>
-            </p>
+            </div>
             <fieldset>
                 <legend>Жирность:</legend>
                 <ul>
                     <li>
                         <input type="radio" name="fat-group" value="fat0" id="filter-fat0-id">
-                        <label for="id="filter-fat0-id">0%</label>
+                        <label for="filter-fat0-id">0%</label>
                     </li>
                     <li>
                         <input type="radio" name="fat-group" value="fat10" id="filter-fat10-id">
-                        <label for="id="filter-fat10-id">до 10%</label>
+                        <label for="filter-fat10-id">до 10%</label>
                     </li>
                     <li>
                         <input type="radio" name="fat-group" value="fat30" id="filter-fat30-id">
-                        <label for="id="filter-fat30-id">до 30%</label>
+                        <label for="filter-fat30-id">до 30%</label>
                     </li>
                     <li>
                         <input type="radio" name="fat-group" value="fat30up" id="filter-fat30up-id">
-                        <label for="id="filter-fat30up-id">выше 30%</label>
+                        <label for="filter-fat30up-id">выше 30%</label>
                     </li>
                 </ul>
             </fieldset>
@@ -126,7 +126,7 @@
               </li>
               <li>
                 <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-                <img src="img/ice-cream-4.jpg"" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                <img src="img/ice-cream-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                 <p><b>415 ₽</b><span>/кг</span></p>
               </li>
               <li>
@@ -219,7 +219,7 @@
                 <td>450 руб.</td>
             </tr>
             <tr>
-                <td rowspan="3">Итого: 750 руб.</td>
+                <td colspan="3">Итого: 750 руб.</td>
             </tr>
         </table>
         <button type="button">Оформить заказ</button>
