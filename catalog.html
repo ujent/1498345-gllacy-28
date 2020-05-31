@@ -11,7 +11,7 @@
   </head>
   <body class="catalog-page">
     <div class="site-wrapper">
-      <header>
+      <header class="site-header">
         <nav class="site-navigation">
           <a href="index.html">
             <img
@@ -44,9 +44,9 @@
                 <h2>Форма поиска</h2>
                 <form action="https://echo.htmlacademy.ru" method="GET">
                   <p>
-                    <label for="search-input-id" class="visually-hidden"
-                      >Поиск</label
-                    >
+                    <label for="search-input-id" class="visually-hidden">
+                      Поиск
+                    </label>
                     <input
                       id="search-input-id"
                       type="text"
@@ -63,9 +63,9 @@
                 <h2 class="visually-hidden">Форма логина</h2>
                 <form action="https://echo.htmlacademy.ru" method="POST">
                   <p>
-                    <label for="login-form-login-id" class="visually-hidden"
-                      >Логин</label
-                    >
+                    <label for="login-form-login-id" class="visually-hidden">
+                      Логин
+                    </label>
                     <input
                       id="login-form-login-id"
                       type="email"
@@ -75,9 +75,9 @@
                     />
                   </p>
                   <p>
-                    <label for="login-form-psw-id" class="visually-hidden"
-                      >Пароль</label
-                    >
+                    <label for="login-form-psw-id" class="visually-hidden">
+                      Пароль
+                    </label>
                     <input
                       id="login-form-psw-id"
                       type="password"
@@ -144,132 +144,147 @@
             </div>
           </div>
         </nav>
-        <p>
-          с 10 до 20, ежедневно <br />
-          8 812 450-25-25
-        </p>
+        <div class="schedule-info">
+          <p>с 10 до 20, ежедневно</p>
+          <p class="phone">8 812 450-25-25</p>
+        </div>
       </header>
       <main>
         <div class="main-content-wrapper">
-          <h1>Сливочное мороженое</h1>
-          <ul class="breadcrumbs">
-            <li><a href="index.html" class="contrast-link">Главная</a></li>
-            <li><a href="catalog.html" class="contrast-link">Каталог</a></li>
-            <li class="breadcrumbs-current">Сливочное</li>
-          </ul>
-          <section>
-            <h2 class="visually-hidden">Фильтр товаров</h2>
-            <form action="https://echo.htmlacademy.ru" method="GET">
-              <div>
-                <h3>Сортировка:</h3>
-                <select name="sort">
-                  <option value="popularity" selected>по популярности</option>
-                  <option value="cheap">сначала недорогие</option>
-                  <option value="expensive">сначала дорогие</option>
-                  <option value="fat">по жирности</option>
-                </select>
-              </div>
-              <div>
-                <h3>Цена: 100 ₽ – 500 ₽</h3>
-                <div class="price-range" aria-label="диапазон цен">
-                  <div class="scale"></div>
-                  <div class="price-range-from" aria-label="цена от"></div>
-                  <div class="price-range-to" aria-label="цена до"></div>
+          <div class="catalog-title-row">
+            <h1>Сливочное мороженое</h1>
+            <ul class="breadcrumbs">
+              <li><a href="index.html" class="contrast-link">Главная</a></li>
+              <li><a href="catalog.html" class="contrast-link">Каталог</a></li>
+              <li class="breadcrumbs-current">Сливочное</li>
+            </ul>
+            <section>
+              <h2 class="visually-hidden">Фильтр товаров</h2>
+              <form
+                action="https://echo.htmlacademy.ru"
+                method="GET"
+                class="catalog-filter"
+              >
+                <div class="catalog-filter-row">
+                  <div class="catalog-filter-sort">
+                    <h3>Сортировка:</h3>
+                    <select name="sort">
+                      <option value="popularity" selected
+                        >по популярности</option
+                      >
+                      <option value="cheap">сначала недорогие</option>
+                      <option value="expensive">сначала дорогие</option>
+                      <option value="fat">по жирности</option>
+                    </select>
+                  </div>
+                  <div class="catalog-filter-price">
+                    <h3>Цена: 100 ₽ – 500 ₽</h3>
+                    <div class="price-range" aria-label="диапазон цен">
+                      <div class="scale"></div>
+                      <div class="price-range-from" aria-label="цена от"></div>
+                      <div class="price-range-to" aria-label="цена до"></div>
+                    </div>
+                  </div>
+                  <fieldset class="catalog-filter-fat">
+                    <legend>Жирность:</legend>
+                    <ul class="catalog-filter-fat-list">
+                      <li>
+                        <input
+                          type="radio"
+                          name="fat-group"
+                          value="fat0"
+                          id="filter-fat0-id"
+                        />
+                        <label for="filter-fat0-id">0%</label>
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          name="fat-group"
+                          value="fat10"
+                          id="filter-fat10-id"
+                        />
+                        <label for="filter-fat10-id">до 10%</label>
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          name="fat-group"
+                          value="fat30"
+                          id="filter-fat30-id"
+                        />
+                        <label for="filter-fat30-id">до 30%</label>
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          name="fat-group"
+                          value="fat30up"
+                          id="filter-fat30up-id"
+                        />
+                        <label for="filter-fat30up-id">выше 30%</label>
+                      </li>
+                    </ul>
+                  </fieldset>
                 </div>
-              </div>
-              <fieldset>
-                <legend>Жирность:</legend>
-                <ul>
-                  <li>
-                    <input
-                      type="radio"
-                      name="fat-group"
-                      value="fat0"
-                      id="filter-fat0-id"
-                    />
-                    <label for="filter-fat0-id">0%</label>
-                  </li>
-                  <li>
-                    <input
-                      type="radio"
-                      name="fat-group"
-                      value="fat10"
-                      id="filter-fat10-id"
-                    />
-                    <label for="filter-fat10-id">до 10%</label>
-                  </li>
-                  <li>
-                    <input
-                      type="radio"
-                      name="fat-group"
-                      value="fat30"
-                      id="filter-fat30-id"
-                    />
-                    <label for="filter-fat30-id">до 30%</label>
-                  </li>
-                  <li>
-                    <input
-                      type="radio"
-                      name="fat-group"
-                      value="fat30up"
-                      id="filter-fat30up-id"
-                    />
-                    <label for="filter-fat30up-id">выше 30%</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset>
-                <legend>Наполнители:</legend>
-                <ul>
-                  <li>
-                    <input
-                      type="checkbox"
-                      name="chocolate"
-                      id="filter-filler-chocolate-id"
-                      checked
-                    />
-                    <label for="filter-filler-chocolate-id">шоколадные</label>
-                  </li>
-                  <li>
-                    <input
-                      type="checkbox"
-                      name="sugar"
-                      id="filter-filler-sugar-id"
-                      checked
-                    />
-                    <label for="filter-filler-sugar-id"
-                      >сахарные присыпки</label
-                    >
-                  </li>
-                  <li>
-                    <input
-                      type="checkbox"
-                      name="fruit"
-                      id="filter-filler-fruits-id"
-                    />
-                    <label for="filter-filler-fruits-id">фрукты</label>
-                  </li>
-                  <li>
-                    <input
-                      type="checkbox"
-                      name="syrup"
-                      id="filter-filler-syrup-id"
-                    />
-                    <label for="filter-filler-syrup-id">сиропы</label>
-                  </li>
-                  <li>
-                    <input
-                      type="checkbox"
-                      name="jam"
-                      id="filter-filler-jam-id"
-                    />
-                    <label for="filter-filler-jam-id">джемы</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <button type="submit">Применить</button>
-            </form>
-          </section>
+                <div class="catalog-filter-row">
+                  <fieldset class="catalog-filter-filler">
+                    <legend>Наполнители:</legend>
+                    <ul class="catalog-filter-filler-list">
+                      <li>
+                        <input
+                          type="checkbox"
+                          name="chocolate"
+                          id="filter-filler-chocolate-id"
+                          checked
+                        />
+                        <label for="filter-filler-chocolate-id">
+                          шоколадные
+                        </label>
+                      </li>
+                      <li>
+                        <input
+                          type="checkbox"
+                          name="sugar"
+                          id="filter-filler-sugar-id"
+                          checked
+                        />
+                        <label for="filter-filler-sugar-id">
+                          сахарные присыпки
+                        </label>
+                      </li>
+                      <li>
+                        <input
+                          type="checkbox"
+                          name="fruit"
+                          id="filter-filler-fruits-id"
+                        />
+                        <label for="filter-filler-fruits-id">фрукты</label>
+                      </li>
+                      <li>
+                        <input
+                          type="checkbox"
+                          name="syrup"
+                          id="filter-filler-syrup-id"
+                        />
+                        <label for="filter-filler-syrup-id">сиропы</label>
+                      </li>
+                      <li>
+                        <input
+                          type="checkbox"
+                          name="jam"
+                          id="filter-filler-jam-id"
+                        />
+                        <label for="filter-filler-jam-id">джемы</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <button type="submit">Применить</button>
+                </div>
+              </form>
+            </section>
+          </div>
+
           <section>
             <h2 class="visually-hidden">Список наименований мороженого</h2>
             <ul class="catalog-list">
@@ -493,7 +508,7 @@
             </li>
           </ul>
         </section>
-        <p class="footer-copyright">
+        <div class="footer-copyright">
           <a
             href="https://htmlacademy.ru/intensive/htmlcss"
             class="contrast-link"
@@ -514,16 +529,16 @@
               />
             </svg>
           </a>
-          <span
-            >Сделано в
+          <p class="footer-copyright-text">
+            Сделано в
             <a
               href="https://htmlacademy.ru/intensive/htmlcss"
               class="contrast-link"
               >HTML Academy</a
             >
-            © 2019</span
-          >
-        </p>
+            <span>© 2019</span>
+          </p>
+        </div>
       </footer>
     </div>
   </body>
