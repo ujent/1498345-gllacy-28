@@ -161,14 +161,11 @@ a.contrast-link:active {
 }
 
 .main-navigation {
-  display: grid;
-  grid-template-columns: min-content min-content min-content;
-  column-gap: 32px;
+  display: flex;
   align-items: center;
 
   list-style: none;
   margin: 0;
-  margin-left: 24px;
   padding: 0;
 
   font-size: 16px;
@@ -179,6 +176,7 @@ a.contrast-link:active {
 
 .main-navigation a {
   margin: 0 14px;
+  padding: 9px 13px 11px 13px;
   color: var(--basic-color);
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
@@ -206,10 +204,11 @@ a.contrast-link:active {
 }
 
 .user-navigation {
-  display: grid;
-  column-gap: 10px;
-  grid-template-columns: min-content min-content min-content;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  width: 261px;
 }
 
 .user-navigation button {
@@ -655,14 +654,20 @@ a.contrast-link:active {
 }
 
 .site-footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 
   padding: 18px 27px 26px 27px;
 }
 
+.catalog-page .site-footer {
+  border-top: 1px solid var(--additional-contrast-color-light);
+}
+
 .footer-copyright {
+  justify-self: end;
+
   font-size: 12px;
   line-height: 18px;
 }
@@ -676,9 +681,8 @@ a.contrast-link:active {
 }
 
 .socials {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
 
   list-style: none;
   padding: 0;
@@ -692,6 +696,7 @@ a.contrast-link:active {
   height: 32px;
   border-radius: 50%;
   border: 2px solid var(--icon-border);
+  margin-right: 8px;
 }
 
 .social-btn path {
@@ -707,15 +712,27 @@ a.contrast-link:active {
   border: 2px solid var(--icon-border-active);
 }
 
+.additional-info {
+  justify-self: center;
+  width: 327px;
+}
+
 .additional-info-list {
   list-style: none;
   padding: 0;
   margin: 0;
 
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
   white-space: nowrap;
+}
+
+.additional-info-list li {
+  width: 162px;
+}
+
+.additional-info-list li:nth-child(odd):not(.favorite-item) {
+  padding-left: 22px;
 }
 
 .additional-info-list a {
