@@ -48,7 +48,7 @@
           </ul>
           <div class="user-navigation">
             <div class="user-navigation-item">
-              <button type="button" class="search-button">
+              <button type="button" class="search-button menu-button">
                 <span class="visually-hidden">Поиск</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@
                   />
                 </svg>
               </button>
-              <section class="search-form site-popup">
+              <section class="search-popup site-popup">
                 <h2 class="visually-hidden">Форма поиска</h2>
                 <form action="https://echo.htmlacademy.ru" method="GET">
                   <p>
@@ -82,7 +82,7 @@
               </section>
             </div>
             <div class="user-navigation-item">
-              <button type="button" class="login-button">
+              <button type="button" class="login-button menu-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -103,7 +103,7 @@
                 </svg>
                 <span>Вход</span>
               </button>
-              <section class="hidden site-popup">
+              <section class="site-popup login-popup">
                 <h2 class="visually-hidden">Форма логина</h2>
                 <form action="https://echo.htmlacademy.ru" method="POST">
                   <p>
@@ -130,8 +130,8 @@
                       required
                     />
                   </p>
-                  <div>
-                    <button type="submit">Войти</button>
+                  <div class="login-popup-actions">
+                    <button type="submit" class="button">Войти</button>
                     <div>
                       <a href="blank.html">Забыли пароль?</a>
                       <a href="blank.html">Новая регистрация</a>
@@ -143,7 +143,7 @@
             <div class="user-navigation-item">
               <button
                 type="button"
-                class="basket-button basket-button-empty"
+                class="basket-button basket-button-empty menu-button"
                 aria-label="Корзина"
               >
                 <svg
