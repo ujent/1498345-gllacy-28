@@ -564,51 +564,51 @@
       </footer>
     </div>
 
-    <section class="hidden">
-      <h2>Мы обязательно вам ответим!</h2>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <p>
-          <label for="feedback-form-name-id" class="visually-hidden"
-            >Имя и фамилия</label
-          >
-          <input
-            id="feedback-form-name-id"
-            type="text"
-            name="name"
-            placeholder="Имя Фамилия"
-            required
-          />
-        </p>
-        <p>
-          <label for="feedback-form-email-id" class="visually-hidden">
-            Email
-          </label>
-          <input
-            id="feedback-form-email-id"
-            type="email"
-            name="email"
-            placeholder="email@example.com"
-            required
-          />
-        </p>
-        <p>
-          <label for="feedback-form-comment-id" class="visually-hidden">
-            Текст сообщения в свободной форме
-          </label>
-          <textarea
-            id="feedback-form-comment-id"
-            name="comment"
-            placeholder="В свободной форме"
-            cols="30"
-            rows="10"
-            required
-          ></textarea>
-        </p>
-        <button type="submit" class="button">Отправить</button>
-      </form>
-      <button type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-    </section>
+    <div class="feedback-popup-overlay">
+      <section class="site-popup feedback-popup">
+        <h2>Мы обязательно вам ответим!</h2>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <p>
+            <label for="feedback-form-name-id" class="visually-hidden"
+              >Имя и фамилия</label
+            >
+            <input
+              id="feedback-form-name-id"
+              type="text"
+              name="name"
+              placeholder="Имя Фамилия"
+              required
+            />
+          </p>
+          <p>
+            <label for="feedback-form-email-id" class="visually-hidden">
+              Email
+            </label>
+            <input
+              id="feedback-form-email-id"
+              type="email"
+              name="email"
+              placeholder="email@example.com"
+              required
+            />
+          </p>
+          <p>
+            <label for="feedback-form-comment-id" class="visually-hidden">
+              Текст сообщения в свободной форме
+            </label>
+            <textarea
+              id="feedback-form-comment-id"
+              name="comment"
+              placeholder="В свободной форме"
+              required
+            ></textarea>
+          </p>
+          <button type="submit" class="button submit-button">Отправить</button>
+        </form>
+        <button type="button" class="close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </section>
+    </div>
   </body>
 </html>

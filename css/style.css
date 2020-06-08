@@ -72,6 +72,7 @@
   --delimiter-color: rgba(50, 50, 50, 0.2);
 
   --form-border-color: #d3d3d2;
+  --overlay-color: rgba(0, 0, 0, 0.4);
 }
 
 html {
@@ -234,7 +235,8 @@ input[type="radio"].visually-hidden {
   filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.4));
 }
 
-.site-popup input {
+.site-popup input,
+.site-popup textarea {
   padding: 13px;
 
   font: inherit;
@@ -246,6 +248,26 @@ input[type="radio"].visually-hidden {
   border-radius: 4px;
 
   outline: none;
+}
+
+.site-popup textarea {
+  resize: none;
+}
+
+.site-popup input:hover,
+.site-popup textarea:hover {
+  border: 2px solid var(--input-border);
+}
+
+.site-popup input:focus,
+.site-popup textarea:focus {
+  border: 2px solid var(--input-border-outline);
+}
+
+.site-popup input::placeholder,
+.site-popup textarea::placeholder {
+  color: var(--additional-color-light);
+  font-weight: normal;
 }
 
 .catalog-menu {
@@ -975,4 +997,75 @@ input[type="radio"].visually-hidden {
   height: 13px;
   float: left;
   margin: 3px 7px 0 0;
+}
+
+.feedback-popup-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--overlay-color);
+}
+
+.feedback-popup {
+  position: relative;
+
+  width: 477px;
+  margin: 338px auto auto auto;
+  padding: 17px 25px 26px 24px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-popup h2 {
+  color: var(--basic-contrast-color);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+
+  margin: 0;
+  margin-bottom: 19px;
+}
+
+.feedback-popup form {
+  width: 100%;
+}
+
+.feedback-popup input {
+  width: 267px;
+}
+
+.feedback-popup textarea {
+  width: 100%;
+  height: 154px;
+}
+
+.feedback-popup textarea::placeholder,
+.feedback-popup input::placeholder {
+  letter-spacing: 0.1em;
+}
+
+.feedback-popup p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.feedback-popup .submit-button {
+  padding: 10px 24px;
+  float: right;
+}
+
+.feedback-popup .close-button {
+  position: absolute;
+  left: 445px;
+
+  background-image: url(../img/cross-big.svg);
+  background-repeat: no-repeat;
+  background-color: inherit;
+  cursor: pointer;
+
+  width: 18px;
+  height: 17px;
+  border: none;
 }
