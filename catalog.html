@@ -22,18 +22,25 @@
             />
           </a>
           <ul class="main-navigation">
-            <li>
+            <li class="main-navigation-catalog">
               <a
                 class="main-navigation-item main-navigation-current"
                 href="catalog.html"
                 >Каталог</a
               >
-              <ul class="hidden">
+              <ul class="catalog-menu site-popup hidden">
                 <li>
                   <a href="blank.html"><b>Новинки</b></a>
                 </li>
-                <li><a href="catalog.html">Сливочное</a></li>
-                <li><a href="blank.html">Щербеты</a></li>
+                <hr />
+                <li>
+                  <a href="catalog.html" class="catalog-menu-current"
+                    >Сливочное</a
+                  >
+                </li>
+                <li>
+                  <a href="blank.html">Щербеты</a>
+                </li>
                 <li><a href="blank.html">Фруктовый лед</a></li>
                 <li><a href="blank.html">Мелорин</a></li>
               </ul>
@@ -49,7 +56,7 @@
           </ul>
           <div class="user-navigation">
             <div class="user-navigation-item">
-              <button type="button" class="search-button">
+              <button type="button" class="search-button menu-button">
                 <span class="visually-hidden">Поиск</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +72,8 @@
                   />
                 </svg>
               </button>
-              <section class="hidden">
-                <h2>Форма поиска</h2>
+              <section class="search-popup site-popup hidden">
+                <h2 class="visually-hidden">Форма поиска</h2>
                 <form action="https://echo.htmlacademy.ru" method="GET">
                   <p>
                     <label for="search-input-id" class="visually-hidden">
@@ -83,7 +90,7 @@
               </section>
             </div>
             <div class="user-navigation-item">
-              <button type="button" class="login-button">
+              <button type="button" class="login-button menu-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -104,7 +111,7 @@
                 </svg>
                 <span>Вход</span>
               </button>
-              <section class="hidden">
+              <section class="site-popup login-popup hidden">
                 <h2 class="visually-hidden">Форма логина</h2>
                 <form action="https://echo.htmlacademy.ru" method="POST">
                   <p>
@@ -131,8 +138,8 @@
                       required
                     />
                   </p>
-                  <div>
-                    <button type="submit">Войти</button>
+                  <div class="login-popup-actions">
+                    <button type="submit" class="button">Войти</button>
                     <div>
                       <a href="blank.html">Забыли пароль?</a>
                       <a href="blank.html">Новая регистрация</a>
@@ -144,7 +151,7 @@
             <div class="user-navigation-item">
               <button
                 type="button"
-                class="basket-button basket-button-full"
+                class="menu-button basket-button basket-button-full"
                 aria-label="Корзина"
               >
                 <svg
@@ -179,12 +186,12 @@
                 </svg>
                 <span>2 товара</span>
               </button>
-              <section class="hidden">
+              <section class="site-popup basket-popup">
                 <h2 class="visually-hidden">Форма заказа</h2>
-                <table>
-                  <tr>
-                    <td>
-                      <button type="button">
+                <table class="orders-list">
+                  <tr class="order-row">
+                    <td class="order-item">
+                      <button type="button" class="remove-button">
                         <span class="visually-hidden">Убрать из заказа</span>
                       </button>
                       <img
@@ -195,12 +202,14 @@
                       />
                       <span>Пломбир с апельсиновым джемом</span>
                     </td>
-                    <td>1,5 кг х <span>200 руб.</span></td>
-                    <td>300 руб.</td>
+                    <td class="price-item">
+                      1,5 кг х <span class="price">200 руб.</span>
+                    </td>
+                    <td class="price-sum">300 руб.</td>
                   </tr>
-                  <tr>
-                    <td>
-                      <button type="button">
+                  <tr class="order-row">
+                    <td class="order-item">
+                      <button type="button" class="remove-button">
                         <span class="visually-hidden">Убрать из заказа</span>
                       </button>
                       <img
@@ -209,18 +218,22 @@
                         width="33"
                         height="33"
                       />
-                      <span
-                        >Клубничный пломбир с присыпкой из белого шоколада</span
-                      >
+                      <span>
+                        Клубничный пломбир с присыпкой из белого шоколада
+                      </span>
                     </td>
-                    <td>1,5 кг х <span>300 руб.</span></td>
-                    <td>450 руб.</td>
+                    <td class="price-item">
+                      1,5 кг х <span class="price">300 руб.</span>
+                    </td>
+                    <td class="price-sum">450 руб.</td>
                   </tr>
-                  <tr>
-                    <td colspan="3">Итого: 750 руб.</td>
+                  <tr class="total-row">
+                    <td colspan="3"><strong>Итого: 750 руб.</strong></td>
                   </tr>
                 </table>
-                <button type="button">Оформить заказ</button>
+                <button type="button" class="button order-button">
+                  Оформить заказ
+                </button>
               </section>
             </div>
           </div>
@@ -235,8 +248,12 @@
           <div class="catalog-title-row">
             <h1>Сливочное мороженое</h1>
             <ul class="breadcrumbs">
-              <li><a href="index.html" class="contrast-link">Главная</a></li>
-              <li><a href="catalog.html" class="contrast-link">Каталог</a></li>
+              <li>
+                <a href="index.html" class="contrast-link">Главная</a>
+              </li>
+              <li>
+                <a href="catalog.html" class="contrast-link">Каталог</a>
+              </li>
               <li class="breadcrumbs-current">Сливочное</li>
             </ul>
             <section>
