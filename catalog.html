@@ -188,48 +188,60 @@
               </button>
               <section class="site-popup basket-popup">
                 <h2 class="visually-hidden">Форма заказа</h2>
-                <table class="orders-list">
-                  <tr class="order-row">
-                    <td class="order-item">
-                      <button type="button" class="remove-button">
-                        <span class="visually-hidden">Убрать из заказа</span>
-                      </button>
-                      <img
-                        src="img/ice-cream-1.jpg"
-                        alt="Фото пломбира с апельсиновым джемом"
-                        width="33"
-                        height="33"
-                      />
-                      <span>Пломбир с апельсиновым джемом</span>
-                    </td>
-                    <td class="price-item">
-                      1,5 кг х <span class="price">200 руб.</span>
-                    </td>
-                    <td class="price-sum">300 руб.</td>
-                  </tr>
-                  <tr class="order-row">
-                    <td class="order-item">
-                      <button type="button" class="remove-button">
-                        <span class="visually-hidden">Убрать из заказа</span>
-                      </button>
-                      <img
-                        src="img/ice-cream-3.jpg"
-                        alt="Фото клубничного пломбира с присыпкой из белого шоколада"
-                        width="33"
-                        height="33"
-                      />
-                      <span>
-                        Клубничный пломбир с присыпкой из белого шоколада
-                      </span>
-                    </td>
-                    <td class="price-item">
-                      1,5 кг х <span class="price">300 руб.</span>
-                    </td>
-                    <td class="price-sum">450 руб.</td>
-                  </tr>
-                  <tr class="total-row">
-                    <td colspan="3"><strong>Итого: 750 руб.</strong></td>
-                  </tr>
+                <table>
+                  <tbody class="orders-list">
+                    <tr>
+                      <td>
+                        <button type="button" class="remove-button">
+                          <span class="visually-hidden">Убрать из заказа</span>
+                        </button>
+                      </td>
+                      <td class="product-photo">
+                        <img
+                          src="img/ice-cream-1.jpg"
+                          alt="Фото пломбира с апельсиновым джемом"
+                          width="33"
+                          height="33"
+                        />
+                      </td>
+                      <td class="product-name">
+                        <span>Пломбир с апельсиновым джемом</span>
+                      </td>
+                      <td class="price-item">
+                        1,5 кг х <span class="price">200 руб.</span>
+                      </td>
+                      <td class="price-sum">300 руб.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <button type="button" class="remove-button">
+                          <span class="visually-hidden">Убрать из заказа</span>
+                        </button>
+                      </td>
+                      <td class="product-photo">
+                        <img
+                          src="img/ice-cream-3.jpg"
+                          alt="Фото клубничного пломбира с присыпкой из белого шоколада"
+                          width="33"
+                          height="33"
+                        />
+                      </td>
+                      <td class="product-name">
+                        <span>
+                          Клубничный пломбир с присыпкой из белого шоколада
+                        </span>
+                      </td>
+                      <td class="price-item">
+                        1,5 кг х <span class="price">300 руб.</span>
+                      </td>
+                      <td class="price-sum">450 руб.</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr class="total-row">
+                      <td colspan="5"><strong>Итого: 750 руб.</strong></td>
+                    </tr>
+                  </tfoot>
                 </table>
                 <button type="button" class="button order-button">
                   Оформить заказ
