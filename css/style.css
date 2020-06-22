@@ -91,6 +91,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: var(--basic-color);
+  background-color: var(--basic-background-color-1);
 
   min-height: 100%;
   display: grid;
@@ -807,6 +808,20 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
 }
 
+.hits-list-item {
+  position: relative;
+}
+
+.hits-list-item::before {
+  content: "";
+  position: absolute;
+
+  background-image: url(../img/hit.svg);
+  background-repeat: no-repeat;
+  width: 61px;
+  height: 61px;
+}
+
 .shop-info {
   color: var(--basic-contrast-color);
   font-size: 16px;
@@ -1082,6 +1097,9 @@ li.breadcrumbs-current::after {
   text-align: center;
   text-decoration-line: underline;
   text-decoration-color: var(--additional-contrast-color-light);
+
+  margin: 0;
+  margin-top: 26px;
 }
 
 .catalog-item img {
@@ -1095,6 +1113,9 @@ li.breadcrumbs-current::after {
   font-size: 30px;
   line-height: 35px;
   text-shadow: 0px 1px 3px var(--basic-shadow-color);
+
+  margin: 0;
+  margin-top: -58px;
 }
 
 .catalog-item-price b {
