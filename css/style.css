@@ -765,14 +765,24 @@ input[type="radio"].visually-hidden {
   line-height: 22px;
 }
 
+.banners-list li {
+  padding: 16px 22px 20px 16px;
+}
+
+.banners-list button {
+  padding: 13px 22px 13px 22px;
+  margin-top: 40px;
+  float: right;
+}
+
 .banners-list h3 {
   font-size: 35px;
   line-height: 41px;
-  margin: 0 0 16px 0;
+  margin: 0 0 18px 0;
 }
 
-.banners-list li {
-  padding: 16px;
+.banners-list p {
+  margin: 0;
 }
 
 .banner-crimson {
