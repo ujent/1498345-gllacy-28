@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="site-wrapper">
+    <div class="site-wrapper site-wrapper-1">
       <header class="site-header">
         <nav class="site-navigation">
           <img
@@ -222,84 +222,32 @@
       <main>
         <div class="main-content-wrapper">
           <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
-          <section class="advertisement">
+          <section class="advertisement slider">
             <h2 class="visually-hidden">Реклама мороженого</h2>
             <ul class="advertisement-list">
-              <li>
+              <li class="advertisement-item-1 slide slide-current">
                 <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-                <img
-                  src="img/two-ice-creams-1.png"
-                  width="644"
-                  height="582"
-                  alt="Крем-брюле и пломбир с малиновым джемом"
-                />
                 <button type="button" class="button button-large">
                   Давайте оба!
                 </button>
               </li>
-              <li class="hidden">
+              <li class="advertisement-item-2 slide">
                 <h3>Шоколадный пломбир и лимонный сорбет</h3>
-                <img
-                  src="img/two-ice-creams-2.png"
-                  width="644"
-                  height="582"
-                  alt="Шоколадный пломбир и лимонный сорбет"
-                />
                 <button type="button" class="button button-large">
                   Давайте оба!
                 </button>
               </li>
-              <li class="hidden">
+              <li class="advertisement-item-3 slide">
                 <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-                <img
-                  src="img/two-ice-creams-3.png"
-                  width="639"
-                  height="582"
-                  alt="Крем-брюле и пломбир с малиновым джемом"
-                />
                 <button type="button" class="button button-large">
                   Давайте оба!
                 </button>
               </li>
             </ul>
-            <!--Not sure, depends on realization-->
-            <fieldset class="advertisement-view-switch">
-              <legend class="visually-hidden">Листалка товаров</legend>
-              <div>
-                <label for="ad-product1-id" class="visually-hidden">
-                  Лист 1
-                </label>
-                <input
-                  id="ad-product1-id"
-                  type="radio"
-                  name="ice-cream-view"
-                  checked
-                  value="ice-cream-view_1"
-                />
-              </div>
-              <div>
-                <label for="ad-product2-id" class="visually-hidden">
-                  Лист 2
-                </label>
-                <input
-                  id="ad-product2-id"
-                  type="radio"
-                  name="ice-cream-view"
-                  value="ice-cream-view_2"
-                />
-              </div>
-              <div>
-                <label for="ad-product3-id" class="visually-hidden">
-                  Лист 3
-                </label>
-                <input
-                  id="ad-product3-id"
-                  type="radio"
-                  name="ice-cream-view"
-                  value="ice-cream-view_3"
-                />
-              </div>
-            </fieldset>
+            <div class="slider-controls">
+              <button class="current" type="button" name="slider1" aria-label="Первый слайд"></button>
+              <button type="button" name="slider2"  aria-label="Второй слайд"></button>
+              <button type="button" name="slider3" aria-label="Третий слайд"></button>
           </section>
           <section class="banners">
             <h2 class="visually-hidden">Баннеры</h2>
@@ -610,5 +558,6 @@
         </button>
       </section>
     </div>
+    <script src="js/slider.js"></script>
   </body>
 </html>

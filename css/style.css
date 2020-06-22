@@ -19,8 +19,8 @@
 
   --accent-color: #e84d37;
 
-  --basic-background-color: #849d8f;
-  --basic-background-backlight: rgba(215, 242, 227, 0.75);
+  --basic-background-color-1: #849d8f;
+  --basic-background-backlight-1: rgba(215, 242, 227, 0.75);
   --basic-background-color-2: #8996a6;
   --basic-background-backlight-2: rgba(218, 228, 239, 0.75);
   --basic-background-color-3: #9d8b84;
@@ -89,7 +89,6 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: var(--basic-color);
-  background-color: var(--basic-background-color);
 
   min-height: 100%;
   display: grid;
@@ -164,6 +163,24 @@ input[type="radio"].visually-hidden {
 .site-wrapper {
   width: 1200px;
   margin: 0 auto;
+
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.site-wrapper-1 {
+  background-color: var(--basic-background-color-1);
+  background-image: url(../img/slider1.png);
+}
+
+.site-wrapper-2 {
+  background-color: var(--basic-background-color-2);
+  background-image: url(../img/slider2.png);
+}
+
+.site-wrapper-3 {
+  background-color: var(--basic-background-color-3);
+  background-image: url(../img/slider3.png);
 }
 
 .site-header {
@@ -274,6 +291,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-menu {
+  display: none;
   min-width: 143px;
 
   list-style: none;
@@ -380,7 +398,8 @@ input[type="radio"].visually-hidden {
   top: 60px;
   right: 332px;
 
-  display: flex;
+  /* display: flex; */
+  display: none;
   align-items: center;
   justify-content: center;
 
@@ -437,6 +456,8 @@ input[type="radio"].visually-hidden {
 }
 
 .login-popup {
+  display: none;
+
   position: absolute;
   top: 60px;
   right: 228px;
@@ -605,7 +626,7 @@ input[type="radio"].visually-hidden {
   font-size: 32px;
   line-height: 44px;
   font-weight: bold;
-  letter-spacing: 0.05em;
+  /* letter-spacing: 0.05em; */
   text-shadow: 0px 2px 5px var(--btn-large-text-shadow-color);
   background: var(--btn-background-color);
   box-shadow: 0px 2px 2px var(--btn-large-shadow-color);
@@ -661,29 +682,79 @@ input[type="radio"].visually-hidden {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  margin-top: -40px;
 }
 
 .advertisement-list h3 {
   font-size: 60px;
   line-height: 60px;
   text-align: center;
+  margin: 0;
+  margin-bottom: 24px;
 }
 
 .advertisement-list li {
   margin: 0 auto;
   width: 672px;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  padding-top: 320px;
 }
 
-.advertisement-view-switch {
-  padding: 0;
-  margin: 0;
-  border: none;
+.advertisement-list button {
+  padding: 9px 40px 10px 40px;
+  margin: 0 auto;
+}
 
+.advertisement-item-1 {
+  /* background-image: url(../img/two-ice-creams-1.png); */
+}
+
+.advertisement-item-2 {
+  background-image: url(../img/two-ice-creams-2.png);
+}
+
+.advertisement-item-3 {
+  background-image: url(../img/two-ice-creams-3.png);
+}
+
+.slider {
+  position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-current {
   display: flex;
+  flex-direction: column;
 }
 
-.advertisement-view-switch p {
-  margin: 0;
+.slider-controls {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  width: 79px;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  border: 2px solid var(--basic-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls .current {
+  background-color: var(--basic-color);
 }
 
 .banners-list {
@@ -1125,6 +1196,8 @@ li.breadcrumbs-current::after {
 }
 
 .feedback-popup-overlay {
+  display: none;
+
   position: fixed;
   width: 100%;
   height: 100%;
