@@ -75,6 +75,8 @@
   --overlay-color: rgba(0, 0, 0, 0.4);
 
   --basket-popup-additional-color: #ababab;
+
+  --slider-btn-hover: rgba(255, 255, 255, 0.4);
 }
 
 html {
@@ -708,18 +710,6 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
 }
 
-.advertisement-item-1 {
-  /* background-image: url(../img/two-ice-creams-1.png); */
-}
-
-.advertisement-item-2 {
-  background-image: url(../img/two-ice-creams-2.png);
-}
-
-.advertisement-item-3 {
-  background-image: url(../img/two-ice-creams-3.png);
-}
-
 .slider {
   position: relative;
 }
@@ -751,6 +741,15 @@ input[type="radio"].visually-hidden {
   border: 2px solid var(--basic-color);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-controls button:hover,
+.slider-controls button:focus {
+  background-color: var(--slider-btn-hover);
+}
+
+.slider-controls button {
+  outline: none;
 }
 
 .slider-controls .current {
