@@ -926,6 +926,8 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+
+  text-decoration-color: inherit;
 }
 
 .mailing-wrapper {
@@ -1210,7 +1212,7 @@ li.breadcrumbs-current::after {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 
-  padding: 18px 27px 26px 27px;
+  padding: 14px 27px 24px 27px;
 }
 
 .catalog-page .site-footer {
@@ -1225,7 +1227,7 @@ li.breadcrumbs-current::after {
 }
 
 .footer-copyright a {
-  font-weight: inherit;
+  font: inherit;
 }
 
 .footer-copyright-text {
@@ -1244,8 +1246,8 @@ li.breadcrumbs-current::after {
 .social-btn {
   display: block;
 
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 2px solid var(--icon-border);
   margin-right: 8px;
@@ -1265,8 +1267,7 @@ li.breadcrumbs-current::after {
 }
 
 .additional-info {
-  justify-self: center;
-  width: 327px;
+  margin-left: 18px;
 }
 
 .additional-info-list {
@@ -1304,7 +1305,7 @@ li.breadcrumbs-current::after {
   width: 15px;
   height: 13px;
   float: left;
-  margin: 3px 7px 0 0;
+  margin: 6px 7px 0 0;
 }
 
 .feedback-popup-overlay {
