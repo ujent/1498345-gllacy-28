@@ -833,7 +833,7 @@ input[type="radio"].visually-hidden {
   background-repeat: repeat;
   border-radius: 16px;
 
-  padding: 24px 23px 33px 20px;
+  padding: 24px 23px 30px 20px;
 }
 
 .shop-info h2 {
@@ -850,8 +850,41 @@ input[type="radio"].visually-hidden {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 26px;
-  row-gap: 33px;
+  column-gap: 28px;
+  row-gap: 12px;
+}
+
+.shop-info-list li {
+  position: relative;
+}
+
+.shop-info-list li::before {
+  position: absolute;
+  content: "";
+  background-color: inherit;
+  background-repeat: no-repeat;
+  width: 49px;
+  height: 49px;
+}
+
+.shop-info-item p {
+  margin: 10px 0 0 55px;
+}
+
+.shop-info-item-1 {
+  background: url("../img/ice-cream.svg") no-repeat;
+}
+
+.shop-info-item-2 {
+  background: url("../img/cow.svg") no-repeat;
+}
+
+.shop-info-item-3 {
+  background: url("../img/eco.svg") no-repeat;
+}
+
+.shop-info-item-4 {
+  background: url("../img/thermometer.svg") no-repeat;
 }
 
 .index-cols {
