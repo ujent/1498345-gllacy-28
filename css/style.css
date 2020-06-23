@@ -77,6 +77,8 @@
   --basket-popup-additional-color: #ababab;
 
   --slider-btn-hover: rgba(255, 255, 255, 0.4);
+
+  --contacts-background: #fefefe;
 }
 
 html {
@@ -675,7 +677,7 @@ input[type="radio"].visually-hidden {
 
 .main-content-wrapper {
   width: 100%;
-  padding: 0 27px;
+  padding: 0 27px 40px 27px;
 
   display: grid;
   row-gap: 40px;
@@ -905,7 +907,6 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/strawberry.jpg);
   background-repeat: no-repeat;
 
-  padding: 23px 20px;
   padding: 18px 20px 23px 20px;
 }
 
@@ -982,6 +983,50 @@ input[type="radio"].visually-hidden {
 .mailing button {
   height: 44px;
   padding: 0 19px;
+}
+
+.contacts-wrapper {
+  position: relative;
+}
+
+.contacts-wrapper iframe {
+  border: none;
+}
+
+.contacts {
+  position: absolute;
+  top: 62px;
+  right: 27px;
+
+  min-width: 303px;
+  min-height: 306px;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--basic-contrast-color);
+  background-color: var(--contacts-background);
+  border-radius: 16px;
+  padding: 30px 25px;
+}
+
+.contacts b {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.contacts p:last-of-type {
+  margin-bottom: 30px;
+}
+
+.contacts .button {
+  padding: 9px 28px;
 }
 
 .catalog-page h1 {
