@@ -906,17 +906,19 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 
   padding: 23px 20px;
+  padding: 18px 20px 23px 20px;
 }
 
 .blog-news h2 {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  margin: 0 0 13px 0;
+  margin: 0 0 3px 0;
 }
 
 .blog-news-link {
   max-width: 287px;
+  margin: 0;
 }
 
 .blog-news-link a {
@@ -938,11 +940,12 @@ input[type="radio"].visually-hidden {
   border-radius: 16px;
 
   min-height: 210px;
-  padding: 29px 16px 35px 20px;
+  padding: 24px 16px 35px 20px;
 }
 
 .mailing p {
   margin: 0;
+  margin-bottom: 41px;
 }
 
 .mailing input {
@@ -954,6 +957,7 @@ input[type="radio"].visually-hidden {
   height: 44px;
   width: 368px;
   padding-left: 14px;
+  margin-right: 8px;
 
   background: var(--basic-color);
   border: 1px solid var(--input-border);
