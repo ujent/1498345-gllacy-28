@@ -1324,11 +1324,6 @@ li.breadcrumbs-current::after {
   border-radius: 50%;
 }
 
-.filter-input-checkbox:hover + label,
-.filter-input-checkbox:focus + label {
-  color: var(--special);
-}
-
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
@@ -1338,7 +1333,6 @@ li.breadcrumbs-current::after {
   height: 20px;
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -1350,6 +1344,24 @@ li.breadcrumbs-current::after {
   height: 20px;
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:focus + label::before {
+  background-image: url(../img/checkbox-off-hover.svg);
+}
+
+.filter-input-checkbox:hover:checked + label::before,
+.filter-input-checkbox:focus:checked + label {
+  background-image: url(../img/checkbox-on-hover.svg);
+}
+
+.filter-input-checkbox:active + label::before {
+  background-image: url(../img/checkbox-off-active.svg);
+}
+
+.filter-input-checkbox:active:checked + label::before {
+  background-image: url(../img/checkbox-on-active.svg);
 }
 
 .catalog-filter-filler {
