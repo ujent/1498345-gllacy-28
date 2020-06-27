@@ -846,6 +846,10 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 
+.hits {
+  padding-top: 36px;
+}
+
 .hits-list {
   list-style: none;
   margin: 0;
@@ -888,6 +892,7 @@ input[type="radio"].visually-hidden {
   border-radius: 16px;
 
   padding: 24px 23px 30px 20px;
+  margin-top: -70px;
 }
 
 .shop-info h2 {
