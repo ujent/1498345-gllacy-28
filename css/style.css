@@ -74,6 +74,8 @@
   --catalog-item-hover: rgba(255, 255, 255, 0.2);
   --catalog-item-shadow: rgba(0, 0, 0, 0.2);
   --filter-option: rgba(255, 255, 255, 0.8);
+  --filter-option-hover: rgba(255, 255, 255, 1);
+  --filter-option-active: rgba(255, 255, 255, 0.4);
 
   --form-border-color: #d3d3d2;
   --overlay-color: rgba(0, 0, 0, 0.4);
@@ -1322,6 +1324,24 @@ li.breadcrumbs-current::after {
   height: 8px;
   background-color: var(--filter-option);
   border-radius: 50%;
+}
+
+.filter-input-radio:hover + label::before,
+.filter-input-radio:focus + label::before {
+  border-color: var(--filter-option-hover);
+}
+
+.filter-input-radio:hover:checked + label::after,
+.filter-input-radio:focus:checked + label::after {
+  background-color: var(--filter-option-hover);
+}
+
+.filter-input-radio:active + label::before {
+  border-color: var(--filter-option-active);
+}
+
+.filter-input-radio:active:checked + label::after {
+  background-color: var(--filter-option-active);
 }
 
 .filter-input-checkbox + label::before {
