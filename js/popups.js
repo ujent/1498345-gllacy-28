@@ -63,6 +63,11 @@ loginBtn.addEventListener("mouseover", function () {
   }
 });
 
+loginPopup.addEventListener("mouseleave", function () {
+  loginPopup.classList.remove("site-popup-show");
+  loginPopup.classList.remove("site-popup-error");
+});
+
 loginForm.addEventListener("submit", function (evt) {
   if (!loginInput.value || !loginPassword.value) {
     evt.preventDefault();
