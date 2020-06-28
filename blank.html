@@ -24,9 +24,7 @@
             </a>
             <ul class="main-navigation">
               <li class="main-navigation-catalog">
-                <a
-                  class="main-navigation-item main-navigation-current"
-                  href="catalog.html"
+                <a class="main-navigation-item catalog-link" href="catalog.html"
                   >Каталог</a
                 >
                 <section class="catalog-menu site-popup">
@@ -76,7 +74,7 @@
                     />
                   </svg>
                 </button>
-                <section class="search-popup site-popup hidden">
+                <section class="search-popup site-popup">
                   <h2 class="visually-hidden">Форма поиска</h2>
                   <form action="https://echo.htmlacademy.ru" method="GET">
                     <p>
@@ -115,9 +113,13 @@
                   </svg>
                   <span>Вход</span>
                 </button>
-                <section class="site-popup login-popup hidden">
+                <section class="site-popup login-popup">
                   <h2 class="visually-hidden">Форма логина</h2>
-                  <form action="https://echo.htmlacademy.ru" method="POST">
+                  <form
+                    action="https://echo.htmlacademy.ru"
+                    method="POST"
+                    class="login-form"
+                  >
                     <p>
                       <label for="login-form-login-id" class="visually-hidden">
                         Логин
@@ -396,5 +398,6 @@
         </footer>
       </div>
     </div>
+    <script src="js/popups.js"></script>
   </body>
 </html>

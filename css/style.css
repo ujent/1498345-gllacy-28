@@ -266,49 +266,6 @@ input[type="radio"].visually-hidden {
   left: 2px;
 }
 
-.site-popup {
-  background-color: var(--additional-background-color);
-
-  border-radius: 4px;
-  filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.4));
-  z-index: 99;
-}
-
-.site-popup input,
-.site-popup textarea {
-  padding: 13px;
-
-  font: inherit;
-  font-size: 14px;
-  line-height: 16px;
-
-  background-color: var(--basic-color);
-  border: 1px solid var(--form-border-color);
-  border-radius: 4px;
-
-  outline: none;
-}
-
-.site-popup textarea {
-  resize: none;
-}
-
-.site-popup input:hover,
-.site-popup textarea:hover {
-  border: 2px solid var(--input-border);
-}
-
-.site-popup input:focus,
-.site-popup textarea:focus {
-  border: 2px solid var(--input-border-outline);
-}
-
-.site-popup input::placeholder,
-.site-popup textarea::placeholder {
-  color: var(--additional-color-light);
-  font-weight: normal;
-}
-
 .catalog-menu {
   display: none;
   min-width: 143px;
@@ -1743,4 +1700,104 @@ li.breadcrumbs-current::after {
   width: 18px;
   height: 17px;
   border: none;
+}
+
+/* Popup */
+.site-popup {
+  background-color: var(--additional-background-color);
+
+  border-radius: 4px;
+  filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.4));
+  z-index: 99;
+}
+
+.site-popup input,
+.site-popup textarea {
+  padding: 13px;
+
+  font: inherit;
+  font-size: 14px;
+  line-height: 16px;
+
+  background-color: var(--basic-color);
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+
+  outline: none;
+}
+
+.site-popup textarea {
+  resize: none;
+}
+
+.site-popup input:hover,
+.site-popup textarea:hover {
+  border: 2px solid var(--input-border);
+  padding: 12px;
+}
+
+.site-popup input:focus,
+.site-popup textarea:focus {
+  border: 2px solid var(--input-border-outline);
+  padding: 12px;
+}
+
+.site-popup input::placeholder,
+.site-popup textarea::placeholder {
+  color: var(--additional-color-light);
+  font-weight: normal;
+}
+
+.site-popup-show {
+  display: block;
+}
+
+.site-popup-show.search-popup {
+  display: flex;
+}
+
+.site-popup-error {
+  animation: shake 0.6s;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

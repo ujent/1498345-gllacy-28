@@ -22,7 +22,9 @@
             />
             <ul class="main-navigation">
               <li class="main-navigation-catalog">
-                <a class="main-navigation-item" href="catalog.html">Каталог</a>
+                <a class="main-navigation-item catalog-link" href="catalog.html"
+                  >Каталог</a
+                >
                 <section class="catalog-menu site-popup">
                   <h2 class="visually-hidden">Подменю каталога</h2>
                   <p>
@@ -109,7 +111,11 @@
                 </button>
                 <section class="site-popup login-popup">
                   <h2 class="visually-hidden">Форма логина</h2>
-                  <form action="https://echo.htmlacademy.ru" method="POST">
+                  <form
+                    action="https://echo.htmlacademy.ru"
+                    method="POST"
+                    class="login-form"
+                  >
                     <p>
                       <label for="login-form-login-id" class="visually-hidden">
                         Логин
@@ -461,7 +467,9 @@
                 <b>8 812 450-25-25</b> <br />
                 (с 10 до 20 ежедневно)
               </p>
-              <button type="button" class="button">Форма обратной связи</button>
+              <button type="button" class="button feedback-button">
+                Форма обратной связи
+              </button>
             </section>
           </div>
         </main>
@@ -598,7 +606,11 @@
     <div class="feedback-popup-overlay">
       <section class="site-popup feedback-popup">
         <h2>Мы обязательно вам ответим!</h2>
-        <form action="https://echo.htmlacademy.ru" method="POST">
+        <form
+          action="https://echo.htmlacademy.ru"
+          method="POST"
+          class="feedback-form"
+        >
           <p>
             <label for="feedback-form-name-id" class="visually-hidden"
               >Имя и фамилия</label
@@ -634,13 +646,17 @@
               required
             ></textarea>
           </p>
-          <button type="submit" class="button submit-button">Отправить</button>
+          <button type="submit" class="button submit-button">
+            Отправить
+          </button>
         </form>
-        <button type="button" class="close-button">
+        <button type="button" class="close-button site-popup-close">
           <span class="visually-hidden">Закрыть</span>
         </button>
       </section>
     </div>
     <script src="js/slider.js"></script>
+    <script src="js/feedback.js"></script>
+    <script src="js/popups.js"></script>
   </body>
 </html>
