@@ -30,6 +30,7 @@
   --wafer-background-color: rgb(239, 223, 190);
   --crimson-background-color: rgb(122, 20, 40);
   --chocolate-background-color: rgb(83, 53, 41);
+  --mailing-background: rgb(161, 204, 250);
   --pink-background-color: rgb(220, 125, 150);
 
   --menu-hover-background-color: #ffffff;
@@ -837,7 +838,9 @@ input[type="radio"].visually-hidden {
   align-self: baseline;
 
   background-image: url(../img/hit.svg);
+  background-color: var(--basic-color);
   background-repeat: no-repeat;
+  border-radius: 50%;
   width: 61px;
   height: 61px;
 }
@@ -952,6 +955,7 @@ input[type="radio"].visually-hidden {
 .mailing-wrapper {
   background-image: url(../img/bg-post.svg);
   background-repeat: no-repeat;
+  background-color: var(--mailing-background);
 
   padding: 5px 6px;
 }
