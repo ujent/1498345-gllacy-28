@@ -675,6 +675,7 @@ input[type="radio"].visually-hidden {
 .schedule-info-phone a {
   display: inline-block;
   margin-top: 8px;
+  vertical-align: baseline;
 
   text-decoration: none;
   color: inherit;
