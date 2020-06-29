@@ -799,12 +799,14 @@ input[type="radio"].visually-hidden {
   background-color: var(--crimson-background-color);
   background-image: url(../img/crimson.jpg);
   background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .banner-chocolate {
   background-color: var(--chocolate-background-color);
   background-image: url(../img/chocolate.jpg);
   background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .hits {
@@ -838,6 +840,7 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/hit.svg);
   background-color: var(--basic-color);
   background-repeat: no-repeat;
+  background-position: 0 0;
   border-radius: 50%;
   width: 61px;
   height: 61px;
@@ -926,6 +929,7 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-color);
   background-image: url(../img/strawberry.jpg);
   background-repeat: no-repeat;
+  background-position: 0 0;
 
   padding: 18px 20px 23px 20px;
 }
@@ -954,6 +958,7 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/bg-post.svg);
   background-repeat: no-repeat;
   background-color: var(--mailing-background);
+  background-position: 0 0;
 
   padding: 5px 6px;
 }
@@ -1012,7 +1017,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   background-color: var(--map-background);
   background-image: url(../img/map.jpg);
-  background-position: 0;
+  background-position: 0 0;
   background-repeat: no-repeat;
 }
 
