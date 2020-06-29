@@ -1339,7 +1339,7 @@ li.breadcrumbs-current::after {
 }
 
 .filter-input-checkbox:hover:checked + label::before,
-.filter-input-checkbox:focus:checked + label {
+.filter-input-checkbox:focus:checked + label::before {
   background-image: url(../img/checkbox-on-hover.svg);
 }
 
