@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11,
+*/
+
 /* we can have not only colors in constants so we use "color" prefix */
 :root {
   --basic-color: #ffffff;
@@ -104,6 +111,7 @@ body {
 
   min-height: 100%;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
 }
 
@@ -124,6 +132,7 @@ img {
 
 a {
   color: var(--basic-contrast-color);
+  -webkit-text-decoration-color: var(--link-decoration-color);
   text-decoration-color: var(--link-decoration-color);
   font-weight: 500;
   font-size: 16px;
@@ -133,16 +142,19 @@ a {
 a:hover,
 a:focus {
   color: var(--accent-color);
+  -webkit-text-decoration-color: var(--link-decoration-color-hover);
   text-decoration-color: var(--link-decoration-color-hover);
 }
 
 a:active {
   color: var(--accent-color);
+  -webkit-text-decoration-color: var(--link-decoration-color-active);
   text-decoration-color: var(--link-decoration-color-active);
 }
 
 a.contrast-link {
   color: var(--basic-color);
+  -webkit-text-decoration-color: var(--link-contrast-decoration-color);
   text-decoration-color: var(--link-contrast-decoration-color);
 }
 
@@ -150,6 +162,7 @@ a.contrast-link:hover,
 a.contrast-link:focus,
 a.contrast-link:active {
   color: var(--link-contrast-color-hover);
+  -webkit-text-decoration-color: var(--link-contrast-decoration-color-hover);
   text-decoration-color: var(--link-contrast-decoration-color-hover);
 }
 
@@ -167,6 +180,7 @@ input[type="radio"].visually-hidden {
   border: 0;
   padding: 0;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -207,6 +221,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation {
   display: grid;
+  grid-template-columns: auto 1fr -webkit-min-content;
   grid-template-columns: auto 1fr min-content;
 }
 
@@ -230,6 +245,7 @@ input[type="radio"].visually-hidden {
   margin-left: 10px;
   padding: 6px 13px 8px 12px;
   color: var(--basic-color);
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -397,6 +413,16 @@ input[type="radio"].visually-hidden {
   border: 2px solid var(--input-border-outline);
 }
 
+.search-popup input::-webkit-input-placeholder {
+  color: var(--additional-color-light);
+  font-weight: normal;
+}
+
+.search-popup input::-moz-placeholder {
+  color: var(--additional-color-light);
+  font-weight: normal;
+}
+
 .search-popup input::placeholder {
   color: var(--additional-color-light);
   font-weight: normal;
@@ -515,6 +541,7 @@ input[type="radio"].visually-hidden {
 }
 
 .product-photo img {
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 50%;
   width: 33px;
@@ -875,6 +902,7 @@ input[type="radio"].visually-hidden {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 28px;
   column-gap: 28px;
   row-gap: 12px;
 }
@@ -951,6 +979,8 @@ input[type="radio"].visually-hidden {
   font-size: 24px;
   line-height: 30px;
 
+  -webkit-text-decoration-color: inherit;
+
   text-decoration-color: inherit;
 }
 
@@ -1001,6 +1031,16 @@ input[type="radio"].visually-hidden {
 
 .mailing input:focus {
   border: 2px solid var(--input-border-outline);
+}
+
+.mailing input::-webkit-input-placeholder {
+  color: var(--additional-color-light);
+  font-weight: normal;
+}
+
+.mailing input::-moz-placeholder {
+  color: var(--additional-color-light);
+  font-weight: normal;
 }
 
 .mailing input::placeholder {
@@ -1288,6 +1328,8 @@ li.breadcrumbs-current::after {
   position: relative;
   display: block;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
 }
 
@@ -1451,7 +1493,9 @@ li.breadcrumbs-current::after {
   line-height: 22px;
   font-weight: 500;
   text-align: center;
+  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
+  -webkit-text-decoration-color: var(--additional-contrast-color-light);
   text-decoration-color: var(--additional-contrast-color-light);
 
   margin: 0;
@@ -1459,6 +1503,7 @@ li.breadcrumbs-current::after {
 }
 
 .catalog-item img {
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 50%;
   height: 267px;
@@ -1693,6 +1738,16 @@ li.breadcrumbs-current::after {
   height: 154px;
 }
 
+.feedback-popup textarea::-webkit-input-placeholder,
+.feedback-popup input::-webkit-input-placeholder {
+  letter-spacing: 0.1em;
+}
+
+.feedback-popup textarea::-moz-placeholder,
+.feedback-popup input::-moz-placeholder {
+  letter-spacing: 0.1em;
+}
+
 .feedback-popup textarea::placeholder,
 .feedback-popup input::placeholder {
   letter-spacing: 0.1em;
@@ -1727,6 +1782,7 @@ li.breadcrumbs-current::after {
   background-color: var(--additional-background-color);
 
   border-radius: 4px;
+  -webkit-filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.4));
   filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.4));
   z-index: 99;
 }
@@ -1762,6 +1818,18 @@ li.breadcrumbs-current::after {
   padding: 12px;
 }
 
+.site-popup input::-webkit-input-placeholder,
+.site-popup textarea::-webkit-input-placeholder {
+  color: var(--additional-color-light);
+  font-weight: normal;
+}
+
+.site-popup input::-moz-placeholder,
+.site-popup textarea::-moz-placeholder {
+  color: var(--additional-color-light);
+  font-weight: normal;
+}
+
 .site-popup input::placeholder,
 .site-popup textarea::placeholder {
   color: var(--additional-color-light);
@@ -1777,10 +1845,29 @@ li.breadcrumbs-current::after {
 }
 
 .site-popup-error {
+  -webkit-animation: shake 0.6s;
   animation: shake 0.6s;
 }
 
 /* Animations */
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 
 @keyframes bounce {
   0% {
@@ -1797,6 +1884,28 @@ li.breadcrumbs-current::after {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
