@@ -385,9 +385,9 @@ input[type="radio"].visually-hidden {
   width: 32px;
 }
 
-.search-button:focus svg path,
-.search-button:hover svg path,
-.search-button:active svg path {
+.search-button:focus .svg-colored-part,
+.search-button:hover .svg-colored-part,
+.search-button:active .svg-colored-part {
   fill: var(--basic-contrast-color);
 }
 
@@ -537,7 +537,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 36px;
 }
 
-.orders-list tr:last-child td {
+.orders-list-row:last-child td {
   padding-bottom: 16px;
 }
 
