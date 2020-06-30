@@ -1300,12 +1300,12 @@ li.breadcrumbs-current::after {
 
 .range-controls .toggle-min:hover,
 .range-controls .toggle-min:focus {
-  left: 36px;
+  left: 32px;
 }
 
 .range-controls .toggle-max:hover,
 .range-controls .toggle-max:focus {
-  left: 128px;
+  left: 129px;
 }
 
 .catalog-filter-fat {
