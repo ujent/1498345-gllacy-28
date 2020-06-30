@@ -227,11 +227,11 @@ input[type="radio"].visually-hidden {
 
 .main-navigation {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
 
   list-style: none;
   margin: 0;
+  margin-top: 15px;
   padding: 0;
 
   font-size: 16px;
@@ -275,17 +275,21 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
-.main-navigation-catalog .catalog-menu {
+.main-navigation-catalog .catalog-menu-wrapper {
+  display: none;
+
   position: absolute;
-  top: 36px;
   left: 2px;
+  padding-top: 2px;
+  z-index: 99;
 }
 
 .catalog-menu {
-  display: none;
   min-width: 143px;
-
   background-color: var(--basic-color);
+}
+.main-navigation-catalog:hover .catalog-menu-wrapper {
+  display: block;
 }
 
 .catalog-menu ul {
@@ -348,11 +352,12 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  align-items: center;
   width: 290px;
+  margin-top: 15px;
 }
 
 .user-navigation-item {
+  position: relative;
   margin-left: 10px;
 }
 
@@ -378,7 +383,6 @@ input[type="radio"].visually-hidden {
 
 .user-navigation .search-button {
   width: 32px;
-  position: relative;
 }
 
 .search-button:focus svg path,
@@ -387,13 +391,16 @@ input[type="radio"].visually-hidden {
   fill: var(--basic-contrast-color);
 }
 
-.search-popup {
-  position: absolute;
-  top: 60px;
-  right: 332px;
-
-  /* display: flex; */
+.search-popup-wrapper {
   display: none;
+  position: absolute;
+  right: 0;
+  padding-top: 3px;
+  z-index: 99;
+}
+
+.search-popup {
+  display: flex;
   align-items: center;
   justify-content: center;
 
@@ -434,10 +441,6 @@ input[type="radio"].visually-hidden {
   padding: 0 16px;
 }
 
-.user-navigation .login-button {
-  position: relative;
-}
-
 .login-button svg,
 .basket-button svg {
   margin-top: 6px;
@@ -459,13 +462,15 @@ input[type="radio"].visually-hidden {
   fill: var(--basic-contrast-basket-color);
 }
 
-.login-popup {
+.login-popup-wrapper {
   display: none;
-
   position: absolute;
-  top: 60px;
-  right: 228px;
+  right: 0;
+  margin-top: 3px;
+  z-index: 99;
+}
 
+.login-popup {
   width: 277px;
   padding: 20px 17px 22px 19px;
 }
@@ -498,15 +503,17 @@ input[type="radio"].visually-hidden {
   margin-right: 20px;
 }
 
-.basket-button {
-  position: relative;
+.basket-popup-wrapper {
+  display: none;
+  position: absolute;
+  right: 0;
+  padding-top: 3px;
+  z-index: 99;
 }
 
 .basket-popup {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 176px;
+  display: flex;
+  flex-direction: column;
   width: 539px;
   padding: 28px 14px 24px 20px;
 
@@ -591,7 +598,7 @@ input[type="radio"].visually-hidden {
 }
 
 .basket-popup .order-button {
-  float: right;
+  align-self: flex-end;
   padding: 9px 16px;
 }
 
@@ -825,14 +832,12 @@ input[type="radio"].visually-hidden {
 .banner-crimson {
   background-color: var(--crimson-background-color);
   background-image: url(../img/crimson.jpg);
-  background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .banner-chocolate {
   background-color: var(--chocolate-background-color);
   background-image: url(../img/chocolate.jpg);
-  background-repeat: no-repeat;
   background-position: 0 0;
 }
 
@@ -1167,6 +1172,7 @@ li.breadcrumbs-current::after {
 }
 
 .catalog-filter .button-light {
+  align-self: center;
   padding: 7px 27px;
   margin-top: 24px;
 }
@@ -1316,12 +1322,14 @@ li.breadcrumbs-current::after {
   padding: 0;
 
   display: flex;
-  padding: 11px 0px 8px 13px;
+  flex-wrap: wrap;
+  padding: 11px 0 0 13px;
 }
 
 .catalog-filter-fat-list .filter-option {
   padding-left: 36px;
   margin-right: 16px;
+  margin-bottom: 8px;
 }
 
 .filter-option label {
@@ -1425,18 +1433,18 @@ li.breadcrumbs-current::after {
 
 .catalog-filter-filler-list .filter-option {
   padding-left: 24px;
-  margin-right: 20px;
+  margin-right: 29px;
+  margin-bottom: 8px;
 }
 
 .catalog-filter-filler-list {
   list-style: none;
   margin: 0;
   margin-top: 4px;
-  padding: 8px 0px 8px 24px;
+  padding: 8px 0 0 24px;
 
   display: flex;
   min-width: 711px;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -1838,10 +1846,7 @@ li.breadcrumbs-current::after {
 
 .site-popup-show {
   display: block;
-}
-
-.site-popup-show.search-popup {
-  display: flex;
+  animation: bounce 0.6s;
 }
 
 .site-popup-error {

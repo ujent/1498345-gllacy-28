@@ -26,23 +26,25 @@
                 <a class="main-navigation-item catalog-link" href="catalog.html"
                   >Каталог</a
                 >
-                <section class="catalog-menu site-popup">
-                  <h2 class="visually-hidden">Подменю каталога</h2>
-                  <p>
-                    <a href="blank.html"><b>Новинки</b></a>
-                  </p>
-                  <hr />
-                  <ul>
-                    <li>
-                      <a href="catalog.html">Сливочное</a>
-                    </li>
-                    <li>
-                      <a href="blank.html">Щербеты</a>
-                    </li>
-                    <li><a href="blank.html">Фруктовый лед</a></li>
-                    <li><a href="blank.html">Мелорин</a></li>
-                  </ul>
-                </section>
+                <div class="catalog-menu-wrapper">
+                  <section class="catalog-menu site-popup">
+                    <h2 class="visually-hidden">Подменю каталога</h2>
+                    <p>
+                      <a href="blank.html"><b>Новинки</b></a>
+                    </p>
+                    <hr />
+                    <ul>
+                      <li>
+                        <a href="catalog.html">Сливочное</a>
+                      </li>
+                      <li>
+                        <a href="blank.html">Щербеты</a>
+                      </li>
+                      <li><a href="blank.html">Фруктовый лед</a></li>
+                      <li><a href="blank.html">Мелорин</a></li>
+                    </ul>
+                  </section>
+                </div>
               </li>
               <li>
                 <a class="main-navigation-item" href="blank.html"
@@ -54,7 +56,7 @@
               </li>
             </ul>
             <div class="user-navigation">
-              <div class="user-navigation-item">
+              <div class="user-navigation-item user-navigation-search">
                 <button type="button" class="search-button menu-button">
                   <span class="visually-hidden">Поиск</span>
                   <svg
@@ -71,24 +73,26 @@
                     />
                   </svg>
                 </button>
-                <section class="search-popup site-popup">
-                  <h2 class="visually-hidden">Форма поиска</h2>
-                  <form action="https://echo.htmlacademy.ru" method="GET">
-                    <p>
-                      <label for="search-input-id" class="visually-hidden">
-                        Поиск
-                      </label>
-                      <input
-                        id="search-input-id"
-                        type="text"
-                        placeholder="Крем-брюле"
-                        name="search"
-                      />
-                    </p>
-                  </form>
-                </section>
+                <div class="search-popup-wrapper">
+                  <section class="search-popup site-popup">
+                    <h2 class="visually-hidden">Форма поиска</h2>
+                    <form action="https://echo.htmlacademy.ru" method="GET">
+                      <p>
+                        <label for="search-input-id" class="visually-hidden">
+                          Поиск
+                        </label>
+                        <input
+                          id="search-input-id"
+                          type="text"
+                          placeholder="Крем-брюле"
+                          name="search"
+                        />
+                      </p>
+                    </form>
+                  </section>
+                </div>
               </div>
-              <div class="user-navigation-item">
+              <div class="user-navigation-item user-navigation-login">
                 <button type="button" class="login-button menu-button">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -110,46 +114,51 @@
                   </svg>
                   <span>Вход</span>
                 </button>
-                <section class="site-popup login-popup">
-                  <h2 class="visually-hidden">Форма логина</h2>
-                  <form
-                    action="https://echo.htmlacademy.ru"
-                    method="POST"
-                    class="login-form"
-                  >
-                    <p>
-                      <label for="login-form-login-id" class="visually-hidden">
-                        Логин
-                      </label>
-                      <input
-                        id="login-form-login-id"
-                        type="email"
-                        name="login"
-                        placeholder="email@example.com"
-                        required
-                      />
-                    </p>
-                    <p>
-                      <label for="login-form-psw-id" class="visually-hidden">
-                        Пароль
-                      </label>
-                      <input
-                        id="login-form-psw-id"
-                        type="password"
-                        name="password"
-                        placeholder="......"
-                        required
-                      />
-                    </p>
-                    <div class="login-popup-actions">
-                      <button type="submit" class="button">Войти</button>
-                      <div>
-                        <a href="blank.html">Забыли пароль?</a>
-                        <a href="blank.html">Новая регистрация</a>
+                <div class="login-popup-wrapper">
+                  <section class="site-popup login-popup">
+                    <h2 class="visually-hidden">Форма логина</h2>
+                    <form
+                      action="https://echo.htmlacademy.ru"
+                      method="POST"
+                      class="login-form"
+                    >
+                      <p>
+                        <label
+                          for="login-form-login-id"
+                          class="visually-hidden"
+                        >
+                          Логин
+                        </label>
+                        <input
+                          id="login-form-login-id"
+                          type="email"
+                          name="login"
+                          placeholder="email@example.com"
+                          required
+                        />
+                      </p>
+                      <p>
+                        <label for="login-form-psw-id" class="visually-hidden">
+                          Пароль
+                        </label>
+                        <input
+                          id="login-form-psw-id"
+                          type="password"
+                          name="password"
+                          placeholder="......"
+                          required
+                        />
+                      </p>
+                      <div class="login-popup-actions">
+                        <button type="submit" class="button">Войти</button>
+                        <div>
+                          <a href="blank.html">Забыли пароль?</a>
+                          <a href="blank.html">Новая регистрация</a>
+                        </div>
                       </div>
-                    </div>
-                  </form>
-                </section>
+                    </form>
+                  </section>
+                </div>
               </div>
               <div class="user-navigation-item">
                 <button

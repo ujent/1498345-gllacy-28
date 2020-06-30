@@ -1,17 +1,14 @@
 var nav = document.querySelector(".site-navigation");
 
-var catalogLink = nav.querySelector(".catalog-link");
-var catalogMenu = nav.querySelector(".catalog-menu");
-
-var searchBtn = nav.querySelector(".search-button");
-var searchPopup = nav.querySelector(".search-popup");
+var searchBtn = nav.querySelector(".user-navigation-search");
+var searchPopup = nav.querySelector(".search-popup-wrapper");
 var searchInput = nav.querySelector("#search-input-id");
 
-var basketBtn = nav.querySelector(".basket-button-full");
-var basketPopup = nav.querySelector(".basket-popup");
+var basketBtn = nav.querySelector(".user-navigation-basket-full");
+var basketPopup = nav.querySelector(".basket-popup-wrapper");
 
-var loginBtn = nav.querySelector(".login-button");
-var loginPopup = nav.querySelector(".login-popup");
+var loginBtn = nav.querySelector(".user-navigation-login");
+var loginPopup = nav.querySelector(".login-popup-wrapper");
 var loginForm = loginPopup.querySelector(".login-form");
 var loginInput = loginPopup.querySelector("#login-form-login-id");
 var loginPassword = loginPopup.querySelector("#login-form-psw-id");
@@ -25,20 +22,12 @@ try {
   isStorageSupport = false;
 }
 
-catalogLink.addEventListener("mouseover", function () {
-  catalogMenu.classList.add("site-popup-show");
-});
-
-catalogMenu.addEventListener("mouseleave", function () {
-  catalogMenu.classList.remove("site-popup-show");
-});
-
 searchBtn.addEventListener("mouseover", function () {
   searchPopup.classList.add("site-popup-show");
   searchInput.focus();
 });
 
-searchPopup.addEventListener("mouseleave", function () {
+searchBtn.addEventListener("mouseleave", function () {
   searchPopup.classList.remove("site-popup-show");
 });
 
@@ -47,7 +36,7 @@ if (basketBtn) {
     basketPopup.classList.add("site-popup-show");
   });
 
-  basketPopup.addEventListener("mouseleave", function () {
+  basketBtn.addEventListener("mouseleave", function () {
     basketPopup.classList.remove("site-popup-show");
   });
 }
@@ -63,7 +52,7 @@ loginBtn.addEventListener("mouseover", function () {
   }
 });
 
-loginPopup.addEventListener("mouseleave", function () {
+loginBtn.addEventListener("mouseleave", function () {
   loginPopup.classList.remove("site-popup-show");
   loginPopup.classList.remove("site-popup-error");
 });
@@ -77,31 +66,6 @@ loginForm.addEventListener("submit", function (evt) {
   } else {
     if (isStorageSupport) {
       localStorage.setItem("login", loginInput.value);
-    }
-  }
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (catalogMenu.classList.contains("site-popup-show")) {
-      evt.preventDefault();
-      catalogMenu.classList.remove("site-popup-show");
-    }
-
-    if (searchPopup.classList.contains("site-popup-show")) {
-      evt.preventDefault();
-      searchPopup.classList.remove("site-popup-show");
-    }
-
-    if (basketPopup && basketPopup.classList.contains("site-popup-show")) {
-      evt.preventDefault();
-      basketPopup.classList.remove("site-popup-show");
-    }
-
-    if (loginPopup.classList.contains("site-popup-show")) {
-      evt.preventDefault();
-      loginPopup.classList.remove("site-popup-show");
-      loginPopup.classList.remove("site-popup-error");
     }
   }
 });
