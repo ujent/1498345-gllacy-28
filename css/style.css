@@ -356,6 +356,10 @@ input[type="radio"].visually-hidden {
   margin-top: 15px;
 }
 
+.index-page .user-navigation {
+  margin-right: -6px;
+}
+
 .user-navigation-item {
   position: relative;
   margin-left: 10px;
@@ -705,6 +709,11 @@ input[type="radio"].visually-hidden {
   text-align: right;
 }
 
+.index-page .schedule-info p {
+  margin-top: 2px;
+  margin-right: -2px;
+}
+
 .schedule-info-phone a {
   display: inline-block;
   margin-top: 8px;
@@ -718,10 +727,14 @@ input[type="radio"].visually-hidden {
 
 .main-content-wrapper {
   width: 100%;
-  padding: 0 27px 26px 27px;
+  padding: 0 27px 40px 27px;
 
   display: grid;
   row-gap: 40px;
+}
+
+.index-page .advertisement {
+  margin-top: -5px;
 }
 
 .advertisement-list {
@@ -847,7 +860,7 @@ input[type="radio"].visually-hidden {
 
 .hits-list {
   list-style: none;
-  margin: 0;
+  margin: 0 -8px;
   padding: 0;
 
   display: flex;
@@ -1064,6 +1077,7 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/map.jpg);
   background-position: 0 0;
   background-repeat: no-repeat;
+  height: 430px;
 }
 
 .contacts-wrapper iframe {
@@ -1087,8 +1101,10 @@ input[type="radio"].visually-hidden {
   padding: 30px 25px;
 }
 
-.contacts a {
+.contacts .tel-link {
   text-decoration: none;
+  margin-top: 3px;
+  display: inline-block;
 }
 
 .contacts b {
@@ -1606,7 +1622,7 @@ li.breadcrumbs-current::after {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 
-  padding: 14px 27px 24px 27px;
+  padding: 20px 27px 24px 27px;
 }
 
 .catalog-page .site-footer {
@@ -1675,7 +1691,7 @@ li.breadcrumbs-current::after {
 }
 
 .additional-info-list li {
-  width: 162px;
+  width: 165px;
 }
 
 .additional-info-list li:nth-child(odd):not(.favorite-item) {
