@@ -726,7 +726,6 @@ input[type="radio"].visually-hidden {
 }
 
 .main-content-wrapper {
-  width: 100%;
   padding: 0 27px 40px 27px;
 
   display: grid;
@@ -1073,11 +1072,16 @@ input[type="radio"].visually-hidden {
 
 .contacts-wrapper {
   position: relative;
-  background-color: var(--map-background);
+  background-color: var(--basic-background-color-1);
   background-image: url(../img/map.jpg);
-  background-position: 0 0;
+  background-position: center 0;
   background-repeat: no-repeat;
   height: 430px;
+}
+
+.contacts-wrapper .site-container {
+  position: relative;
+  margin-top: -436px;
 }
 
 .contacts-wrapper iframe {
