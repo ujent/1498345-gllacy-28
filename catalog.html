@@ -8,8 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.min.css" />
-    <!-- <link rel="stylesheet" href="css/style.min.css" /> -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
     <div class="site-wrapper">
@@ -304,8 +303,13 @@
                 >
                   <div class="catalog-filter-row">
                     <div class="catalog-filter-sort">
-                      <h3>Сортировка:</h3>
+                      <label
+                        class="catalog-filter-sort-label"
+                        for="catalog-filter-sort-id"
+                        >Сортировка:</label
+                      >
                       <select
+                        id="catalog-filter-sort-id"
                         name="sort"
                         class="catalog-filter-item select-control"
                       >
